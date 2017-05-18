@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import java.util.List;
+
 public class VerifyActivity extends Activity {
 
     private static final String CHECK_LOG_FILE = "/cache/recovery/check_log";
@@ -38,43 +40,34 @@ public class VerifyActivity extends Activity {
         super.onCreate(savedInstanceState);
         mIntent = getIntent();
         uiHandler = new Handler();
+
+        progressDialog = new ProgressDialog(VerifyActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setTitle(getText(R.string.verify_update_compatible_title));
+        progressDialog.setMessage(getText(R.string.verify_update_compatible_message));
+        progressDialog.show();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                boolean gotRoot = rootShell.getRoot();
-                if (gotRoot) {
+                final String updatePackagePath = mIntent.getExtras().getString("update_package_path");
+                String command = "mkchecker " + updatePackagePath + " " + CHECK_LOG_FILE;
+                rootShell.getRoot();
+                List<String> result = rootShell.runCommands(command);
+                if (result == null) {
                     uiHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            progressDialog = new ProgressDialog(VerifyActivity.this);
-                            progressDialog.setCancelable(false);
-                            progressDialog.setTitle(getText(R.string.verify_update_compatible_title));
-                            progressDialog.setMessage(getText(R.string.verify_update_compatible_message));
-                            progressDialog.show();
-
-                            new Thread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    final String updatePackagePath = mIntent.getExtras().getString("update_package_path");
-                                    String command = "mkchecker " + updatePackagePath + " " + CHECK_LOG_FILE;
-                                    rootShell.runCommands(command);
-                                    uiHandler.post(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            progressDialog.dismiss();
-                                            setResult(STATUS_SUCCESSFUL, mIntent);
-                                            finish();
-                                        }
-                                    });
-                                }
-                            }).start();
+                            setResult(STATUS_DENIED, mIntent);
+                            finish();
                         }
                     });
                 } else {
                     uiHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            setResult(STATUS_DENIED, mIntent);
+                            progressDialog.dismiss();
+                            setResult(STATUS_SUCCESSFUL, mIntent);
                             finish();
                         }
                     });
