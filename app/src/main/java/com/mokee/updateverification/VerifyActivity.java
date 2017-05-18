@@ -37,14 +37,13 @@ public class VerifyActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mIntent = getIntent();
+        Bundle mBundle = mIntent.getExtras();
+        if (mBundle == null) finish();
         if (!RootShell.requestRootAccess()) {
-            setResult(STATUS_DENIED);
+            setResult(STATUS_DENIED, mIntent);
             finish();
         } else {
-            mIntent = getIntent();
-            Bundle mBundle = mIntent.getExtras();
-            if (mBundle == null) finish();
-
             progressDialog = new ProgressDialog(this);
             progressDialog.setCancelable(false);
             progressDialog.setTitle(getText(R.string.verify_update_compatible_title));
