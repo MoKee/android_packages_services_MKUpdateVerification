@@ -25,49 +25,62 @@ import android.os.Handler;
 
 public class VerifyActivity extends Activity {
 
-    private ProgressDialog progressDialog;
-    private Handler UiHandler;
-    private Intent mIntent;
-
+    private static final String CHECK_LOG_FILE = "/cache/recovery/check_log";
     private static int STATUS_SUCCESSFUL = 8000;
     private static int STATUS_DENIED = 8001;
-
-    private static final String CHECK_LOG_FILE = "/cache/recovery/check_log";
+    private ProgressDialog progressDialog;
+    private RootShell rootShell = RootShell.getInstance();
+    private Handler uiHandler;
+    private Intent mIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mIntent = getIntent();
-        Bundle mBundle = mIntent.getExtras();
-        if (mBundle == null) finish();
-        if (!RootShell.requestRootAccess()) {
-            setResult(STATUS_DENIED, mIntent);
-            finish();
-        } else {
-            progressDialog = new ProgressDialog(this);
-            progressDialog.setCancelable(false);
-            progressDialog.setTitle(getText(R.string.verify_update_compatible_title));
-            progressDialog.setMessage(getText(R.string.verify_update_compatible_message));
-            progressDialog.show();
-
-            UiHandler = new Handler();
-            final String updatePackagePath = mBundle.getString("update_package_path");
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    String command = "mkchecker " + updatePackagePath + " " + CHECK_LOG_FILE;
-                    RootShell.runCommand(command);
-                    UiHandler.post(new Runnable() {
+        uiHandler = new Handler();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean gotRoot = rootShell.getRoot();
+                if (gotRoot) {
+                    uiHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            progressDialog.dismiss();
-                            setResult(STATUS_SUCCESSFUL, mIntent);
+                            progressDialog = new ProgressDialog(VerifyActivity.this);
+                            progressDialog.setCancelable(false);
+                            progressDialog.setTitle(getText(R.string.verify_update_compatible_title));
+                            progressDialog.setMessage(getText(R.string.verify_update_compatible_message));
+                            progressDialog.show();
+
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    final String updatePackagePath = mIntent.getExtras().getString("update_package_path");
+                                    String command = "mkchecker " + updatePackagePath + " " + CHECK_LOG_FILE;
+                                    rootShell.runCommands(command);
+                                    uiHandler.post(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            progressDialog.dismiss();
+                                            setResult(STATUS_SUCCESSFUL, mIntent);
+                                            finish();
+                                        }
+                                    });
+                                }
+                            }).start();
+                        }
+                    });
+                } else {
+                    uiHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            setResult(STATUS_DENIED, mIntent);
                             finish();
                         }
                     });
                 }
-            }).start();
-        }
+            }
+        }).start();
     }
 
 }

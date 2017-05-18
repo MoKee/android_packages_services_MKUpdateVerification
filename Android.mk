@@ -17,4 +17,10 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/app/src/main/res
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-annotations
+
+LOCAL_STATIC_JAVA_AAR_LIBRARIES := \
+    mokee-libsuperuser
+
 include $(BUILD_PACKAGE)
