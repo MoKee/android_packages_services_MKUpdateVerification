@@ -1,4 +1,4 @@
-package com.mokee.verifier;
+package com.mokee.updateverification;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mokee.verifier", appContext.getPackageName());
+        assertEquals("com.mokee.updateverification", appContext.getPackageName());
     }
 }

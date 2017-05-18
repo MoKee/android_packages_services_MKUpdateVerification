@@ -1,4 +1,4 @@
-package com.mokee.verifier;
+package com.mokee.updateverification;
 
 import org.junit.Test;
 
