@@ -138,18 +138,8 @@ public class RootShell {
             @Override
             public void onCommandResult(final int commandCode, final int exitCode, final List<String> output) {
                 resultRef.set(output);
-                if (exitCode == 0)
-                    countDownLatch.countDown();
-                else {
-                    // failed to re-use root for future commands, so re-aquire it
-                    _hasRoot = null;
-                    getRoot(new IGotRootListener() {
-                        @Override
-                        public void onGotRootResult(final boolean hasRoot) {
-                            countDownLatch.countDown();
-                        }
-                    });
-                }
+                countDownLatch.countDown();
+                _rootSession.close();
             }
         });
         try {

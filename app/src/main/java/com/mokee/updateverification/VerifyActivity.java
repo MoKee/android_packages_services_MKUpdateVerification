@@ -52,8 +52,11 @@ public class VerifyActivity extends Activity {
             public void run() {
                 final String updatePackagePath = mIntent.getExtras().getString("update_package_path");
                 String command = "mkchecker " + updatePackagePath + " " + CHECK_LOG_FILE;
-                rootShell.getRoot();
-                List<String> result = rootShell.runCommands(command);
+                boolean gotRoot = rootShell.getRoot();
+                List<String> result = null;
+                if (gotRoot) {
+                    result = rootShell.runCommands(command);
+                }
                 if (result == null) {
                     uiHandler.post(new Runnable() {
                         @Override
