@@ -16,7 +16,5 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">魔趣更新验证组件</string>
-  <string name="verify_update_compatible_title">魔趣更新验证</string>
-  <string name="verify_update_compatible_message">正在验证增量更新的兼容性</string>
+  <string name="verify_update_compatible_message">Weryfikowanie zgodności systemu przed patchowaniem \u2026</string>
 </resources>
