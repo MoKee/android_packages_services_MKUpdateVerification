@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">MoKee 更新驗證套件</string>
+  <string name="verify_update_compatible_title">MoKee 更新驗證</string>
   <string name="verify_update_compatible_message">正在驗證增量更新的相容性</string>
 </resources>
