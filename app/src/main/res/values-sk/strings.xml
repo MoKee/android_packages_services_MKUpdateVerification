@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">Plugin overenia aktualizácie MoKee</string>
+  <string name="verify_update_compatible_title">Overenie aktualizácie MoKee</string>
   <string name="verify_update_compatible_message">Overenie kompatibility systému pred opravou\u2026</string>
 </resources>

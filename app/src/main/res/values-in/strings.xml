@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">Plugin Verifikasi Pemutakhiran MoKee</string>
+  <string name="verify_update_compatible_title">Verifikasi pembaruan MoKee</string>
   <string name="verify_update_compatible_message">Memverifikasi kompatibilitas sistem sebelum patching\u2026</string>
 </resources>
