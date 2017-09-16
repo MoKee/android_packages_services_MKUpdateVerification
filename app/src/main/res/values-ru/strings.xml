@@ -16,5 +16,6 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">MoKee обновление проверки плагин</string>
   <string name="verify_update_compatible_message">Проверка совместимости системы перед обновлением\u2026</string>
 </resources>
