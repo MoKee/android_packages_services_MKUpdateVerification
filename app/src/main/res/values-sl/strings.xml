@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">Vtičnik za preverjanje posodobitev MoKee</string>
+  <string name="verify_update_compatible_title">Preverjanje posodobitev MoKee</string>
   <string name="verify_update_compatible_message">Preverjanje združljivosti sistema pred nadgradnjo\u2026</string>
 </resources>
