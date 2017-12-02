@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">Wtyczka weryfikacji aktualizacji MoKee</string>
+  <string name="verify_update_compatible_title">Weryfikacja aktualizacji MoKee</string>
   <string name="verify_update_compatible_message">Weryfikowanie zgodności systemu przed patchowaniem \u2026</string>
 </resources>
