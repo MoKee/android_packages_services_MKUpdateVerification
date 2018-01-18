@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">Plugin de Vérification de MàJ de MoKee</string>
+  <string name="app_name">Greffon de vérification des mises à jour MoKee</string>
   <string name="verify_update_compatible_title">Vérification de mise à jour de MoKee</string>
   <string name="verify_update_compatible_message">Vérification de la compatibilité du système avant de patcher\u2026</string>
 </resources>
