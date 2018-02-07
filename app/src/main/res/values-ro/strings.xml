@@ -16,5 +16,7 @@
     limitations under the License.
 -->
 <resources>
+  <string name="app_name">Actualizați pluginul de verificare MoKee</string>
+  <string name="verify_update_compatible_title">Verificarea actualizare MoKee</string>
   <string name="verify_update_compatible_message">Verifică compatibilitatea cu sistemul înainte de patching\u2026</string>
 </resources>
