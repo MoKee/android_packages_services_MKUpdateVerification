@@ -18,5 +18,5 @@
 <resources>
   <string name="app_name">MoKee güncelleme doğrulama eklentisi</string>
   <string name="verify_update_compatible_title">MoKee güncelleme doğrulama</string>
-  <string name="verify_update_compatible_message">\u2026 Öncesi sistem uyumluluğu doğrulanıyor</string>
+  <string name="verify_update_compatible_message">Düzeltme işleminden önce sistem uyumluluğu doğrulanıyor\u2026</string>
 </resources>
