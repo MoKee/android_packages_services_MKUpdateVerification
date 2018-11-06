@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">MoKee update controle</string>
-  <string name="verify_update_compatible_title">MoKee update controle</string>
-  <string name="verify_update_compatible_message">Systeemcompatibiliteit verifiëren voor het patchen\u2026</string>
+    <string name="app_name">MoKee update controle</string>
+    <string name="verify_update_compatible_title">MoKee update controle</string>
+    <string name="verify_update_compatible_message">Systeemcompatibiliteit verifiëren voor het patchen\u2026</string>
 </resources>

@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">MoKee 업데이트 확인 플러그인</string>
-  <string name="verify_update_compatible_title">MoKee 업데이트 확인</string>
-  <string name="verify_update_compatible_message">\u2026 패치하기 전에 시스템 호환성 확인</string>
+    <string name="app_name">MoKee 업데이트 확인 플러그인</string>
+    <string name="verify_update_compatible_title">MoKee 업데이트 확인</string>
+    <string name="verify_update_compatible_message">\u2026 패치하기 전에 시스템 호환성 확인</string>
 </resources>

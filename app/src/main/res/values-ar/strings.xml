@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">المكون الإضافي لموكي للتحقق من التحديثات</string>
-  <string name="verify_update_compatible_title">تحقق من تحديث موكي</string>
-  <string name="verify_update_compatible_message">التحقق من توافق النظام قبل patching\u2026</string>
+    <string name="app_name">المكون الإضافي لموكي للتحقق من التحديثات</string>
+    <string name="verify_update_compatible_title">تحقق من تحديث موكي</string>
+    <string name="verify_update_compatible_message">التحقق من توافق النظام قبل patching\u2026</string>
 </resources>
