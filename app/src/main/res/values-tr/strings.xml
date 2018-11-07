@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">MoKee Güncelleme Doğrulama Eklentisi</string>
-  <string name="verify_update_compatible_title">MoKee güncelleme doğrulama</string>
-  <string name="verify_update_compatible_message">\u2026 Öncesi sistem uyumluluğu doğrulanıyor</string>
+    <string name="app_name">MoKee Güncelleme Doğrulama Eklentisi</string>
+    <string name="verify_update_compatible_title">MoKee güncelleme doğrulama</string>
+    <string name="verify_update_compatible_message">\u2026 Öncesi sistem uyumluluğu doğrulanıyor</string>
 </resources>

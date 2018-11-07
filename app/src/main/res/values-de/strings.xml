@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">MoKee Update Verifizierung-Plugin</string>
-  <string name="verify_update_compatible_title">MoKee Update Verifizierung</string>
-  <string name="verify_update_compatible_message">Überprüfung der Systemkompatibilität bevor patchen\u2026</string>
+    <string name="app_name">MoKee Update Verifizierung-Plugin</string>
+    <string name="verify_update_compatible_title">MoKee Update Verifizierung</string>
+    <string name="verify_update_compatible_message">Überprüfung der Systemkompatibilität bevor patchen\u2026</string>
 </resources>

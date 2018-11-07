@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-  <string name="app_name">Плагін праверкі абнаўленняў Mokee</string>
-  <string name="verify_update_compatible_title">Праверка абнаўленняў Mokee</string>
-  <string name="verify_update_compatible_message">Праверка сумяшчальнасці сістэмы перад абнаўленнем\u2026</string>
+    <string name="app_name">Плагін праверкі абнаўленняў Mokee</string>
+    <string name="verify_update_compatible_title">Праверка абнаўленняў Mokee</string>
+    <string name="verify_update_compatible_message">Праверка сумяшчальнасці сістэмы перад абнаўленнем\u2026</string>
 </resources>

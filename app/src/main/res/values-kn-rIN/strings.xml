@@ -16,5 +16,5 @@
     limitations under the License.
 -->
 <resources>
-  <string name="verify_update_compatible_message">ಪ್ಯಾಚ್ ಮಾಡುವ ಮೊದಲು ಸಿಸ್ಟಮ್ ಹೊಂದಾಣಿಕೆಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ\u2026</string>
+    <string name="verify_update_compatible_message">ಪ್ಯಾಚ್ ಮಾಡುವ ಮೊದಲು ಸಿಸ್ಟಮ್ ಹೊಂದಾಣಿಕೆಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ\u2026</string>
 </resources>
