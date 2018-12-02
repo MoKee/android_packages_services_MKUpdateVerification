@@ -15,4 +15,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources></resources>
+<resources>
+    <string name="verify_update_compatible_message">A verificar a compatibilidade do sistema antes de instalar\u2026</string>
+</resources>
