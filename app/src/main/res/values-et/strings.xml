@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-    <string name="app_name">MoKee - Plug-in de Verificação de Atualização</string>
-    <string name="verify_update_compatible_title">MoKee - verificação de atualização</string>
-    <string name="verify_update_compatible_message">A verificar a compatibilidade do sistema antes de instalar\u2026</string>
+    <string name="app_name">MoKee värskenduse kontrollimise plugin</string>
+    <string name="verify_update_compatible_title">MoKee värskenduse kontroll</string>
+    <string name="verify_update_compatible_message">Süsteemi ühilduvuse kontrollimine enne lappimist\u2026</string>
 </resources>
